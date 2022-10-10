@@ -6,7 +6,8 @@
 
 ## Reflection
 
-* [META Information](reflection/meta-information.md)
+* [Static Properties](reflection/static-properties.md)
+* [Dynamic Properties](reflection/dynamic-properties.md)
 
 ## Design Patterns
 
@@ -21,6 +22,7 @@
 * [Observer Design Pattern](design-patterns/observer-design-pattern.md)
 * [Composite Design Pattern](design-patterns/composite-design-pattern.md)
 * [Flyweight Design Pattern](design-patterns/flyweight-design-pattern.md)
+* [Anti-Patterns](design-patterns/anti-patterns.md)
 
 ## XML
 
