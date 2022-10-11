@@ -8,6 +8,7 @@
 
 * [Static Properties](reflection/static-properties.md)
 * [Dynamic Properties](reflection/dynamic-properties.md)
+* [Examples](reflection/examples.md)
 
 ## Design Patterns
 
