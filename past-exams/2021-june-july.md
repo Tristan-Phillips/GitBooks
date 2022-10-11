@@ -19,7 +19,17 @@ Using the scenario above, answer the questions below
 
 1.1 Using all the detail in the points \[1] to \[6] in the scenario above, draw a UML class diagram to model the scenario. There should be enough detail to show how data will be passed between objects; you do not need to include constructors or accessors/mutators, nor show a client/GUI class. If the UML class diagram is being drawn by hand, use underline to indicate italics
 
+<figure><img src="https://i.imgur.com/l0frThj.png" alt=""><figcaption><p>Answer</p></figcaption></figure>
+
 1.2 Why would a factory method design pattern be a more appropriate design than an abstract factory design pattern?
+
+<details>
+
+<summary>Answer</summary>
+
+The abstract factory design pattern is useful when there are many multiple types of instances that can be created. The factory design pattern is good enough when there are few instances, such as two types of instances in this case
+
+</details>
 
 ## Question 2
 
@@ -50,6 +60,18 @@ private:
 
 2.1 An application named vaccineData.exe can be used to gather vaccine data from a user. Write the code that runs this application as a separate process, where its output is managed by the function in the main GUI/client named create()
 
+<details>
+
+<summary>Answer</summary>
+
+```cpp
+QProcess *process = new QProcess();
+process->start("vaccineData.exe");
+connect(process, &QProcess::readyReadStandardOutput, this, &MainClient::create());
+```
+
+</details>
+
 2.2 Write the code for the create() function. It retrieves the output from the application process in 2.1 and calls the following factory method code to create an instance of a vaccine
 
 ```cpp
@@ -68,7 +90,54 @@ The output from the application read from the standard output is in the form vac
 
 You do not need to include the code for adding the instance to the vaccine list
 
+<details>
+
+<summary>Answer</summary>
+
+```cpp
+void MainWindow::create(QProcess *process){
+	QByteArray input = process->readAllStandardOutput();
+	QStringList values = QString(input).split("*");
+	
+	VaccineFactory vf;
+	Vaccine *vaccine = vf.createVaccine(values[0], values[1], values[2], values[3]);
+	
+	//Add to vaccine list
+}
+```
+
+</details>
+
 2.3 Write the code for the class declaration of the vaccine list class as well as the implementation code of the function that adds a vaccine instance to the list. Remember to take note of the process given at the start of this question (specifically point d)
+
+<details>
+
+<summary>Answer</summary>
+
+```cpp
+//Declaration
+	#include "vaccine.h"
+
+	class VaccineList : public QObject{
+		Q_OBJECT
+	public:
+		VaccineList(QObject *parent = nullptr)
+		bool addVaccine(Vaccine* vaccine);
+	signals:
+		void vaccineAdded(QString result);
+	private:
+		QList <Vaccine*> list;
+	};
+	
+//Implementation
+	bool VaccineList::addVaccine(Vaccine* vac){
+		list->append(vac);
+		emit vaccineAdded(vac->toString());
+	}
+
+```
+
+</details>
 
 2.4 In point e in the process above, the text containing the string representation of a vaccine instance is added to a QListWidget on the GUI. The following code has been provided (where ui->listWidget is the QListWidget variable and string is the string representation of the vaccine)
 
@@ -80,7 +149,32 @@ ui->listWidget->setItem(1, newItem);
 
 However, this code is not working correctly. Make the necessary corrections
 
+<details>
+
+<summary>Answer</summary>
+
+```cpp
+ui->listWidget->insertItem(1, string); //Overloaded method accepts QString
+QListWidgetItem *newItem(new QListWidgetItem); //Alternative method
+newItem->setText(string);
+ui->listWidget->insertItem(1, item); //Can use any row number
+```
+
+</details>
+
 2.5 Could a QStringListModel have been used instead of a QListWidget? If not, explain in detail why not; if it can, explain in detail how it could be achieved. Note that there are no marks for indicating yes or no
+
+<details>
+
+<summary>Answer</summary>
+
+Explain the difference between convenience model / view class, and model / view.
+
+You would need to add a view class such as QListView in order to use QStringListModel
+
+A QStringListModel can be used, if the proper MV classes are prepared and correctly setup, you would need to use a QListView or similar non-convenience class in order to display and represent the data
+
+</details>
 
 ## Question 3
 
@@ -112,6 +206,20 @@ The XML file should have the following structure:
 
 3.1 Reflective programming methods will be used to access data from vaccine instances in the list. Explain in detail what needs to be in place in the classes involved to allow this to be implementable. You should indicate clearly what needs to be done in which classes
 
+<details>
+
+<summary>Answer</summary>
+
+To use reflective programming methods, each class involved must inherit from QObject and include the Q\_OBJECT macro within the class definition.
+
+For reading and writing data, the class(s) from which data must be collected within the XML-writer class, must include a Q\_PROPERTY() macro as well, which defines the QProperties as well as which methods must be utilized for the Read and Write utility.
+
+The Vaccine class will have to inherit from QObject as well as include the Q\_OBJECT macro and all relevant Q\_PROPERTY() macros for which data needs be accessed
+
+The InactivatedVaccine, AttenuatedVaccine, Rabies and Cholera classes will have to include the Q\_OBJECT macro as well, and the Q\_PROPERTY() macro for the relevant data which must be accessed
+
+</details>
+
 3.2 Use DOM to write the data from the vaccine list to the XML structure given above. Consider the following declarations and partial code (where the vaccine list is passed as a pointer to the write() function). Remember to use reflective programming techniques so that the code is as generic as possible
 
 ```cpp
@@ -141,7 +249,48 @@ void XmlWriter::write(MyVaccineList *mvl)
 
 Supply the code where specifically required (indicated in bold italics) so that the data in the vaccine list is written to file
 
+<details>
+
+<summary>Answer</summary>
+
+```cpp
+for(int item = 0; item < mvl->size(); item++){
+    //Get the meta-object
+    const QMetaObject *meta = mvl->at(item)->metaObject();
+    
+    //Setup the vaccine tag
+    QString className = meta->className();
+    QDomElement vaccine(xmlDoc.createElement("vaccine"));
+    vaccine.setAttribute("class", className);
+    root.appendChild(vaccine);
+    
+    //Loop through all the instance's properties
+    for(int count = 1; count < meta->propertyCount(); count++){
+        //Access the instance's properties
+        const QMetaProperty prop = meta->property(count);
+        QString propName = prop.name();
+        QString propValue = mvl->at(item)->property(propName).toString();
+        
+        //Create the appropriate XML tags
+        QDomElement property = xmlDoc.createElement(propName);
+        QDomText propertyText = xmlDoc.createTextNode(propertyValue);
+        property.appendChild(propertyText);
+        vaccine.appendChild(property);
+    }
+}
+```
+
+</details>
+
 3.3 It has been suggested that SAX could just as easily be used to generate the XML file. Comment on this suggestion
+
+<details>
+
+<summary>Answer</summary>
+
+No, SAX can only be used to read XML
+
+</details>
 
 ## Question 4
 
@@ -153,6 +302,20 @@ Give the following:
 2. The regular expression that could be used to ensure that a valid value is entered
 3. Assuming a vaccine instance named vac, add the user authorization code code to the instance’s properties
 4. Is it necessary to use both the input mask and regular expression to ensure a valid entry, explaining why you say so? Note that there are no marks for indicating only yes or no
+
+<details>
+
+<summary>Answer</summary>
+
+1\) ">AAAaa-999x"
+
+2\) "\[A-Z]{3,5}-\[0-9]{3}.?
+
+3\) vac.setProperty("code", code);
+
+4\) No, characters can be skipped. Either use regex and an input mask, or just use regex
+
+</details>
 
 4.2 The following VaccineMemento class has been used to provide run-time backup for the vaccine list. However, it is leading to errors. Rewrite the code so that the errors are fixed and the classic memento pattern is implemented
 
@@ -166,4 +329,31 @@ private:
 };
 ```
 
+<details>
+
+<summary>Answer</summary>
+
+```cpp
+class VaccineMemento{
+private:
+	friend class VaccineList; //Declare the originators friend
+	VaccineMemento();
+	QList<QStringList> getState();
+	void setState(QList<QStringList> v);
+	QList<QStringList> list; //Add the list to store the state
+}
+```
+
+</details>
+
 4.3 An often-given advantage of cloud computing is that there is no longer the need to guess infrastructure in-house capacity. Explain what this means in terms of the scenario used in this exam
+
+<details>
+
+<summary>Answer</summary>
+
+* Vaccine list size is unknown, storage requirements are unknown and may vary
+* Could lead to wasted capacity or insufficient storage
+* Cloud storage facility can be scaled up or down as required
+
+</details>
