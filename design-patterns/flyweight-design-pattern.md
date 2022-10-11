@@ -6,7 +6,7 @@ description: Same-Same, but different
 
 ### Intent
 
-To use memory sharing to support q large numbers of objects efficiently
+To use memory sharing to support a large numbers of objects efficiently
 
 ### Applicability
 
