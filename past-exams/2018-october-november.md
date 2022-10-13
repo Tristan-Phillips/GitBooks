@@ -376,8 +376,14 @@ private:
 
 <summary>Answer</summary>
 
-```
-Staff
+```cpp
+StafffMemento Staff::backup(){
+    QStringList state;
+    state << name << age;
+    StaffMemento backup;
+    backup.setState(state);
+    return backup;
+}
 ```
 
 </details>
