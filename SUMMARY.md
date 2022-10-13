@@ -62,3 +62,5 @@
 * [2021 October November](past-exams/2021-october-november.md)
 * [2021 June July](past-exams/2021-june-july.md)
 * [2021 January February](past-exams/2021-january-february.md)
+* [2018 October November](past-exams/2018-october-november.md)
+* [2018 May June](past-exams/2018-may-june.md)
