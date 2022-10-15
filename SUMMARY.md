@@ -1,66 +1,22 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Libraries](libraries.md)
-* [UML Diagrams](uml-diagrams.md)
 
-## Reflection
+## Textbook Chapters
 
-* [Static Properties](reflection/static-properties.md)
-* [Dynamic Properties](reflection/dynamic-properties.md)
-* [Examples](reflection/examples.md)
-
-## Design Patterns
-
-* [Factory Design Pattern](design-patterns/factory-design-pattern.md)
-* [Abstract Factory Design Pattern](design-patterns/abstract-factory-design-pattern.md)
-* [Singleton Design Pattern](design-patterns/singleton-design-pattern.md)
-* [Memento Design Pattern](design-patterns/memento-design-pattern.md)
-* [Facade Design Pattern](design-patterns/facade-design-pattern.md)
-* [Strategy Design Pattern](design-patterns/strategy-design-pattern.md)
-* [Strategy and Factory Design Patterns Combined](design-patterns/strategy-and-factory-design-patterns-combined.md)
-* [Serializer Design Pattern](design-patterns/serializer-design-pattern.md)
-* [Observer Design Pattern](design-patterns/observer-design-pattern.md)
-* [Composite Design Pattern](design-patterns/composite-design-pattern.md)
-* [Flyweight Design Pattern](design-patterns/flyweight-design-pattern.md)
-* [Anti-Patterns](design-patterns/anti-patterns.md)
-
-## XML
-
-* [DOM Writer](xml/dom-writer.md)
-* [DOM Reader](xml/dom-reader.md)
-* [SAX Reader](xml/sax-reader.md)
-* [Stream Writer](xml/stream-writer.md)
-* [Stream Reader](xml/stream-reader.md)
-
-## MVC
-
-* [MVC](mvc/mvc.md)
-
-## Validation
-
-* [Input Masks](validation/input-masks.md)
-* [Regular Expressions](validation/regular-expressions.md)
-
-## Concurrency
-
-* [Threading](concurrency/threading.md)
-
-## Networking
-
-* [UDP](networking/udp.md)
-* [TCP](networking/tcp.md)
-
-## Misc
-
-* [Additional Content](misc/additional-content.md)
-* [External Resources](misc/external-resources.md)
+* [Chapter 1 - What is interaction design?](textbook-chapters/chapter-1-what-is-interaction-design.md)
+* [Chapter 2 - The process of interaction design](textbook-chapters/chapter-2-the-process-of-interaction-design.md)
+* [Chapter 3 - Conceptualizing interaction](textbook-chapters/chapter-3-conceptualizing-interaction.md)
+* [Chapter 5 - Social interaction](textbook-chapters/chapter-5-social-interaction.md)
+* [Chapter 6 - Emotional interaction](textbook-chapters/chapter-6-emotional-interaction.md)
+* [Chapter 8 - Data gathering](textbook-chapters/chapter-8-data-gathering.md)
+* [Chapter 11 - Discovering requirements](textbook-chapters/chapter-11-discovering-requirements.md)
+* [Chapter 14 - Introducing evaluation](textbook-chapters/chapter-14-introducing-evaluation.md)
+* [Chapter 15 - Evaluation studies: from controlled to natural settings](textbook-chapters/chapter-15-evaluation-studies-from-controlled-to-natural-settings.md)
+* [Chapter 16 - Evaluation: inspections, analytics, and models](textbook-chapters/chapter-16-evaluation-inspections-analytics-and-models.md)
 
 ## Past Exams
 
 * [2022 January February](past-exams/2022-january-february.md)
-* [2021 October November](past-exams/2021-october-november.md)
 * [2021 June July](past-exams/2021-june-july.md)
-* [2021 January February](past-exams/2021-january-february.md)
-* [2018 October November](past-exams/2018-october-november.md)
-* [2018 May June](past-exams/2018-may-june.md)
+* [2020 October November](past-exams/2020-october-november.md)

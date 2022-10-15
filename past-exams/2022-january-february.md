@@ -1,195 +1,194 @@
 ---
-description: Open Book, 2h, Written Exam, 80Marks
+description: 100 Marks total, Written Exam, Closed Book, 2Hours
 ---
 
 # 2022 January February
 
-Transporting cargo around the world is essential in ensuring that customers have access to the goods they need and want. All such items are packaged in some sort of container (which, for the purposes of this scenario, has some volume). Generally, there are two kinds of containers: (i) a box (where we want to know whether it is cube shaped or not), and (ii) a cylinder (where we want to know its diameter). For transport, containers are packed onto pallets, and pallets are then included in a load (where each load will have a code)
+## Question 1 (MCQ)
 
-## Question 1
+1.1 Which option is NOT a user-centered design principle?
 
-1.1 Considering the scenario given above, draw a partial UML class diagram that captures the scenario. You should include the necessary classes, class attributes, and class relationships that are mentioned in the scenario. You do not have to include the Client/GUI class nor indicate constructors, access specifiers, or other methods in the classes you specify. \[You may use a software tool to create the UML class diagram.]
+1. Early Focus on users and tasks
+2. Linear design
+3. Empirical measurement using quantifiable and measurable usability criteria
+4. Iterative design
 
-1.2 Would you use aggregation or composition relationships in the design of this UML class diagram? Explain why you have or have not done so.
+1.2 Which statement regarding interaction design phases is correct?
 
-1.3 The load code takes the following format.\
-• Year value between 2000 and 2099 (both included)\
-• Forward slash (/)\
-• Month value between 01 and 12 (both included)\
-• Forward slash (/)\
-• L\
-• A serial number starting from 1, running up to 9999
+1. Interaction design follows the common design phases of discovery, definition, development, and delivery in an intermittent way
+2. Interaction design follows the common design phases of discovering, designing, prototyping, and evaluating in an intermittent way
+3. Interaction design follows the common design phases of discovering, designing, prototyping and evaluating in an iterative way
+4. Interaction design follows the common design phases of discovery, definition, development, and delivery in an iterative way
 
-Write the regular expression (in quotes) that can be used to check that a load code meets\
-the required criteria. An example of a valid code is 2022/01/L1. Ensure that you use escape characters correctly
+1.3 Assume that you have been contacted to do the interactive design for a local town's electronic library system. You have designed a non-functional collection of screens that demonstrate how a library user will lend a digital book. This activity is an example of
+
+1. Visceral design
+2. Designing alternatives
+3. Prototyping
+4. Establishing requirements
+
+1.4 Integrating interaction design with an agile software development approach is useful because
+
+1. An agile approach incorporates tight iterations, feedback and collaboration with the customer
+2. By using an agile approach, developers can start coding immediately to save time and costs
+3. An agile approach does not require that all critical design elements are captured in a design document
+4. An agile approach requires all software development processes to be specified before development begins to ensure rigour
+
+1.5 Virtual shopping carts, baskets, shelves, checkouts, cash registers, payment options and alternative online shopping techniques show
+
+1. How future scenarios (visions) enable users to interact with information in their everyday lives
+2. How conceptual models provide scenarios of how society can use future generations of imagined technologies
+3. How theories help identify factors relevant to the design and evaluation of interactive products
+4. How seemingly similar tasks can have quite different conceptual models and metaphors underlying their design&#x20;
+
+1.6 People are inherently social. How have various digital technologies enabled us to overcome social distance, even while physical distancing measures have been in place during the COVID-19 pandemic lockdown
+
+1. Face-to-face meetings have been replaced to a large extent by online meetings using sound and video or sound only
+2. Much informal verbal communication has been replaced by texting and using emojis
+3. Creating, sending and forwarding humoristic video and sound clips have replaced the telling of jokes to relief stress and anxiety&#x20;
+4. All of the above
+
+1.7 Which statement is an advantage of focus groups regarding data gathering for interaction design?
+
+1. It works well if there is a known set of possible answers
+2. It works well if participants are in a rush
+3. It is suitable to investigate community issues
+4. It generates good statistical data
+
+1.8 The developers of a new e-reader want to find out how appealing such a device would be to undergraduate students at Unisa. Which one of the following possible questions could be used in an unstructured interview to understand the appeal of using e-readers to the target group?
+
+1. Would you like to read your INF3720 textbook using an e-reader? Answer yes or no
+2. What do you like least about reading books on Google Scholar? Why?
+3. In what format do you prefer to read books, and why?
+4. In your opinion, on a scale of 1 (very difficult) to 5 (very easy), are existing e-readers easy to handle?
+
+1.9 Which type of evaluation study is suitable to study the appropriation of technology?
+
+1. Conducting experiments
+2. Field studies
+3. Usability testing
+4. Quantative research
+
+1.10 Usability testing is usually done in:
+
+1. Natural settings
+2. The wild
+3. Controlled settings
+4. All three other options
 
 ## Question 2
 
-The intention is to serialize container objects using reflective programming approaches. The idea is to convert all object data in a load to XML and save this data on a network store
+**Case study**: The case study following below is hypothetical
 
-2.1 What is the major benefit of using a reflective approach in this scenario?
+Informatics Tutoring Services (ITS) is a private tutoring company in South Africa that provides tutoring services to students who are enrolled for diplomas and degrees in Information Systems at various colleges and universities. In the past, ITS's tutors have been using WhatsApp to communicate with their students, but the company has decided to consider other options due to concerns about WhatsApp's new terms and conditions that will be implemented in 2021. ITS considers the following alternatives
 
-2.2 For a container object that is urgent, the users want to add a property to just this specific object. In such cases, the property name is urgent and its value is a message indicating its priority (such as high priority). Assuming that the classes are set up to allow this ability, write the code to implement this intention for an object named obj. \[Note that this approach can be used to add other optional properties to other objects where necessary.]
+* Developing its own Africanized messaging app that will enhance the digital experience of its clients
+* Adopting Telegram while suggesting modifications to the owner of the app (Telegram Messenger) to localize the app for the South African market
 
-2.3 Consider the requirement to serialize the load class to and from XML
+Assume that you have been appointed by Informatics Tutoring Services (ITS) as an HCI expert. Management has tasked you to do a user experience evaluation of Telegram as a possible alternative. ITS decides to adopt Telegram and you have to manage all aspects of interaction design (ID) related to the possible future enhancement or alternatives planned for the South African market
 
-2.3.1 The following UML class diagram for the serialization has been provided (where the QString is the XML text) for some Load class
+2.1 As an interaction designer, list three interactive technologies that can be used to design the ITS app that is accessible and inclusive to meet the needs of the following group of users. Provide your answers in the table below
 
-<figure><img src="https://i.imgur.com/7x8Vgzo.png" alt=""><figcaption></figcaption></figure>
+| Users                                                              | Technology            |
+| ------------------------------------------------------------------ | --------------------- |
+| Dexterity user ( a person that cannot use hands to touch or type ) | <p>1.<br>2.<br>3.</p> |
+| Deaf user ( a person that cannot hear )                            | <p>1.<br>2.<br>3.</p> |
 
-It has been argued that this is incorrect. Provide a better UML class diagram
+2.2 Who are the stakeholders of the ITS app? Provide your answers in the table below
 
-2.3.2 The following partial class definition has been provided to achieve the write part of the serialization using DOM to write to XML
+| Point | Stakeholder |
+| ----- | ----------- |
+| 1     |             |
+| 2     |             |
+| 3     |             |
+| 4     |             |
 
-<pre class="language-cpp"><code class="lang-cpp">class XmlHandler
-{
-public:
-    XmlHandler();
-<strong>    QString writeXml(Load load);
-</strong>private:
-    QDomDocument doc;
-};</code></pre>
+2.3 Why is it important to involve users during the design of the ITS? Provide your answer in the table below
 
-The intension is to provide the following XML code. Comments on the right are for explanatory purposes
+| Point | Importance of involving stakeholders |
+| ----- | ------------------------------------ |
+| 1     |                                      |
+| 2     |                                      |
+| 3     |                                      |
+| 4     |                                      |
+| 5     |                                      |
 
-```cpp
-// Some code
-<Load code="2021/01/L1">             //the load code is included
-    <Pallet>                         //all containers on the pallet are added
-        <Box urgent="High priority"> //the type of container with message
-            <volume>1</volume>     //all properties with values
-            <cube>true</cube>
-        </Box>
-        <Cylinder>                 //next container
-            <volume>3</volume>
-            <diameter>3</diameter>
-        </Cylinder>
-    </Pallet>
-    <Pallet>                     //next pallet in the load
-        <Box>
-            <volume>2</volume>
-            <cube>false</cube>
-        </Box>
-        <Cylinder>
-            <volume>4</volume>
-            <diameter>4</diameter>
-        </Cylinder>
-    </Pallet>
-</Load>
-```
+2.4 How would you manage the expectations and ownership of the ITS app by the stakeholders? Provide your answer in the table below
 
-Using the partial code below for the function that generates this XML text, complete the code by filling in the parts indicated. You may copy this code into your answer document and type in the necessary code
-
-```cpp
-QString XmlHandler::writeXml(Load load)
-{
-    QString loadCode = load.getCode(); // gets the load code
-    QDomElement root = // set up root load tag
-    // including its load code
-    doc.appendChild(root);
-    foreach(Pallet* p, load) // loop for each pallet in the load
-    {
-        // set up pallet tags
-        // as part of the root load tag
-        foreach(Container* c, *p) // loop for each container
-        {
-            const QMetaObject *mo = c->metaObject();
-            QString classname = //get the classname of the object
-            QDomElement base = doc.createElement(classname);
-            // handle the case where an urgent property has been added
-            // to an object; not all such extra properties should be
-            // added to the tag, only those named ‘urgent’
-            // add this base tag to its parent tag
-            for (int i=1; i<mo->propertyCount(); i++)
-            {
-                QMetaProperty prop = mo->property(i);
-                QString propertyName = prop.name();
-                QString propertyValue = prop.read(c).toString();
-                // create the necessary tags for the property
-            }
-        }
-    }
-    // the generated XML needs to be sent back to calling function
-}
-```
-
-2.4 We come now to the part where this XML text is to be sent over a network
-
-2.4.1 The following partial class definition is provided for the class that will be used to send the data over the network
-
-```cpp
-// Some code
-class Serialize
-{
-public:
-    explicit Serialize(Load l); // load object passed to constructor
-    void doSerialize(); // used to transfer over the network
-private:
-    Load load;
-};
-```
-
-Extend this class definition so that the class can be run as a thread, including all code that would be added to conform to best practice
-
-2.4.2 Complete the following code (that you would expect to find in the client code) that will run an instance of this class as a thread. The code should start the thread and clean up afterwards
-
-```cpp
-Load load;
-Serialize* s(new Serialize(load));
-```
-
-2.4.3 Finally, write the code for the Serialize::doSerialize() function that gets the XML text serialisation using the XmlHandler class in 2.3.2 (repeated below) and uses UDP to send it over the network using port 55555
-
-<pre class="language-cpp"><code class="lang-cpp">class XmlHandler
-{
-public:
-<strong>    XmlHandler();
-</strong><strong>    QString writeXml(Load load);
-</strong>private:
-<strong>    QDomDocument doc;
-</strong>};</code></pre>
+| Points | Expectation management |
+| ------ | ---------------------- |
+| 1      |                        |
+| 2      |                        |
+| 3      |                        |
+| 4      |                        |
+| 5      |                        |
 
 ## Question 3
 
-A model-view approach will be used to display a list of load codes. The following class has been proposed (which allows for the use of a memento of instances of the class)
+3.1 What do you understand by the terms emotional interaction?
 
-```cpp
-class MyListWidget : public QListWidget
-{
-public:
-    MyListWidget();
-    MyListMemento* createMemento();
-    void setMemento(MyListMemento* mlm);
-};
-```
+3.2 From the components of the Anthony Ortony et al (2005) model of emotional design, briefly explain how the design of this watch designed for teenage girls will invoke each of the components of the model. Provide your answers in the table below
 
-3.1 Given the following code, write the statement that would be used to add the load instance's code to the list widget
+| Component  | Explenation |
+| ---------- | ----------- |
+| Visceral   |             |
+| Behavioral |             |
+| Reflective |             |
 
-```cpp
-MyListWidget* mylist = new MyListWidget;
-Load load;
-```
+## Question 4
 
-3.2 Consider the code for the createMemento() function
+Several e-readers for reading e-books, watching movies or viewing pictures are available on the market. The exact design differs between models but they all support book reading that is intended to be as comfortable as reading a paper book. The developers of a new e-reader want to find out how appealing an e-reader would be to senior citizens over 65 years of age. To this end, they have asked you to conduct some interviews for them. You are required to answer the following questions in preparation for the interview
 
-```cpp
-MyListMemento* MyListWidget::createMemento()
-{
-    MyListMemento *mlm(new MyListMemento);
-    QStringList strlist;
-    for(int i=0; i<this->count(); i++)
-    {
-        strlist.append(item(i)->text());
-    }
-    mlm->setState(strlist);
-    return mlm;
-}
-```
+4.1 What is the goal of your data gathering sessions?
 
-Provide the class definition (that would be expected in the header file) for the MyListMemento class
+4.2 In point form, describe the characteristics of structured interviews and focus groups in the table below
 
-3.3 Distinguish between the use of the serialize and memento design patterns as they have been used in this scenario. How do they differ in terms of their ultimate purpose (apart from the fact that the design patterns are being applied to different objects)? Make sure that it is clear which pattern you are referring to in your answer
+| Structured Interviews | Focus Group |
+| --------------------- | ----------- |
+| 1.                    | 1.          |
+| 2.                    | 2.          |
+| 3.                    | 3.          |
 
-3.4 What model/view alternatives does Qt provide that could best be used in place of the QListWidget?
+4.3 List two techniques that could be used for capturing the data during the interview
 
-3.5 Where in the scenario presented in this paper could a factory method design pattern be appropriately used?
+| Techniques |
+| ---------- |
+| 1.         |
+| 2.         |
+
+4.4 What are the disadvantages of taking notes during the interview?
+
+| Disadvantages |
+| ------------- |
+| 1.            |
+| 2.            |
+| 3.            |
+
+4.5 Suggest any three unstructured interview questions that focus on user experience goals regarding this task
+
+| Interview questions |
+| ------------------- |
+| 1.                  |
+| 2.                  |
+| 3.                  |
+
+## Question 5
+
+The case study is hypothetical
+
+The School of Computing (SoC) have a small library, which is not associated with the university's main library. The SoC library has a collection of Information Systems and Computer Science textbooks and journals. The library uses an Excel spreadsheet to manage the library. The challenge is that borrowers return books late or don't return them. The borrowers include students and all School of Computing staff. You have been approached by the SoC to design a system that will help with library management, making sure that late returns and non-returned books are tracked
+
+5.1 Identify three main functional requirements of the library information system application
+
+5.2 Choose one of the functional requirements of the library system and present it as an atomic requirement by populating the Volere template below
+
+5.3 Based on the functional requirement that you chose in the previous question, express it as a user story in the form of an epic
+
+5.4 Assume that you successfully developed the Library information system application and you are concerned about the usability of the application. Discuss four aspects considered important for the good usability of the Library information system in the following table&#x20;
+
+|   | Usability aspect |
+| - | ---------------- |
+| 1 |                  |
+| 2 |                  |
+| 3 |                  |
+| 4 |                  |

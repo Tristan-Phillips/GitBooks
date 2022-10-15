@@ -1,359 +1,190 @@
 ---
-description: 80 Marks, 2h, Open Book, Written Exam
+description: 100 Marks, 2h, Closed Book, Written Exam
 ---
 
 # 2021 June July
 
-Many different vaccines are produced globally to help provide vaccinated persons with immunity from specific infectious diseases. The following points apply to a simplified scenario to be used in this examination.
-
-1. All vaccines must be administered in some way (usually by mouth or by injection). Also, all vaccines should be able to return a string representation of its state
-2. There are two types of vaccines: inactivated vaccines (where the infectious material has been destroyed using chemicals, heat, or radiation) and attenuated vaccines (where the process used to create them involves disabling the virulent properties or using a closely related but less dangerous organism)
-3. The cholera vaccine is a type of attenuated vaccine, and is normally administered in a number of doses. The rabies vaccine is a type of inactivated vaccine, and is normally based on a particular strain of rabies
-4. Users should only be able to create instances of cholera, rabies, and similar types of vaccines
-5. A classic factory method design pattern should be used to create instances of the types of inactivated and attenuated vaccines
-6. There should be an object that contains a list of vaccine instances
-
-Using the scenario above, answer the questions below
-
 ## Question 1
 
-1.1 Using all the detail in the points \[1] to \[6] in the scenario above, draw a UML class diagram to model the scenario. There should be enough detail to show how data will be passed between objects; you do not need to include constructors or accessors/mutators, nor show a client/GUI class. If the UML class diagram is being drawn by hand, use underline to indicate italics
+Answer all questions in this section. Choose the correct answer and write it on your answer sheet. Each question carries 2 marks
 
-<figure><img src="https://i.imgur.com/l0frThj.png" alt=""><figcaption><p>Answer</p></figcaption></figure>
+1.1. Which definition of interaction design is correct?
 
-1.2 Why would a factory method design pattern be a more appropriate design than an abstract factory design pattern?
+1. The extent to which a product provides the right kind of functionality so that users can do what they want to do
+2. **Designing interactive products to support the way people communicate and interact in their everyday lives**
+3. Ways of restricting the kinds of user interaction or interpretation that can take place at a given moment
+4. How good a product is at doing what it is supposed to do
 
-<details>
+1.2. The fact that myUnisa follows a standardized format and structure for all modules implies that the following usability goal has been met
 
-<summary>Answer</summary>
+1. Efficiency
+2. Utility
+3. Safety
+4. **Memorability**
 
-The abstract factory design pattern is useful when there are many multiple types of instances that can be created. The factory design pattern is good enough when there are few instances, such as two types of instances in this case
+1.3. Assume that you have been contracted to do the interactive design for a local town’s electronic library system. You have designed a non-functional collection of screens that demonstrate how a library user will borrow a digital book. This activity is an example of
 
-</details>
+1. Visceral design
+2. Designing alternatives
+3. **Prototyping**
+4. Establishing requirements
+
+1.4. Integrating interaction design with an agile software development approach is useful because:
+
+1. **An agile approach incorporates tight iterations, feedback and collaboration with the customer**
+2. By using an agile approach, developers can start coding immediately to save time and costs
+3. An agile approach does not require that all critical design elements are captured in a design document
+4. An agile approach requires all software development processes to be specified before development begins to ensure rigors
+
+1.5. Virtual shopping carts, baskets, shelves, checkouts, cash registers, payment options and alternative online shopping techniques show
+
+1. How future scenarios (visions) enable users to interact with information in their everyday lives
+2. How conceptual models provide scenarios of how society can use future generations of imagined technologies
+3. How theories help identify factors relevant to the design and evaluation of interactive products
+4. **How seemingly similar tasks can have quite different conceptual models and metaphors underlying their design**
+
+1.6. People are inherently social. How have various digital technologies enabled us to overcome social distance, even while physical distancing measures have been in place during the COVID-19 pandemic lockdown?
+
+1. Face-to-face meetings have been replaced to a large extent by online meetings using sound and video, or sound only
+2. Much informal verbal communication has been replaced by texting and using emojis
+3. Creating, sending and forwarding humoristic video and sound clips have replaced the telling of jokes to relief stress and anxiety
+4. **All of the above**
+
+1.7. Pilot studies are used to:
+
+1. Study user experience of the digital instruments used by airplane pilots
+2. **Do a small trial of the main study to make sure that the proposed research method is viable**
+3. Steer a discussion taking place during a focus group interview
+4. Administer the recording of HCI research data
+
+18 Suppose that you have been contracted to discover the requirements of a new fitness app. Which option below describes the scenario correctly?
+
+1. **An athlete wants to monitor the fitness indicators (heartbeat, calories burnt, duration) of his/her workout**
+2. The system responsibility includes a menu of various exercises while the user intention includes starting and ending workout sessions
+3. The scenario lists a generalized use case showing a detailed set of the specific steps
+4. The scenario is rendered in technical terms, e.g. the fitness app tracks the speed, duration and number of steps, calculates the average heart rate and stores the data in the cloud-based database
+
+1.9. The following are appropriate usability goal requirements for an interactive app that will locate places in a shopping center and provide routes for users to reach their destinations:
+
+1. The app needs to access the GPS location data for the user, have maps of the center and requires knowledge about pathways for disabled people
+2. The app should be cognitively stimulating for potential groups of users with different characteristics
+3. The app must be satisfying, helpful and enhance sociability amongst users
+4. **New users must be able to use it immediately, efficiently and safely**
+
+1.10 Which definition of “hypothesis” below is correct within the context of conducting experiments during evaluation design?
+
+1. **A hypothesis is a guess or prediction about the way users will perform with an interface**
+2. A hypothesis is a t-test that validates a guess or prediction about the way users will perform with an interface
+3. A hypothesis reveals if the differences between experiments conducted in different conditions are significant
+4. A hypothesis is a dissertation that contains the results of conducted experiments
 
 ## Question 2
 
-The process of adding a vaccine instance to the vaccine list is as follows:
+**Case study**: The case study is hypothetical.&#x20;
 
-1. An application is run by the main GUI/client as a separate process that gets vaccine details from the user. The data is returned to the main GUI/client as a string via the process’s standard output
-2. Using the factory method, an appropriate vaccine instance is created in the main GUI/client code
-3. This instance is then added to the list of vaccines
-4. When a vaccine instance is added to the list, using inter-object communication, a signal is automatically sent that is made up of the string representation of the vaccine instance that was added (as was noted in point \[1] in the scenario at the start of this exam paper)
-5. This signal is then picked up by the main GUI/client and leads to the text being added to a QListWidget on the main GUI/client
+Informatics Tutoring Services (ITS) is a private tutoring company in South Africa that provides tutoring services to students who are enrolled for diplomas and degrees in Information Systems at various colleges and universities. In the past, ITS’s tutors have been using WhatsApp to communicate with their students, but the company has decided to consider other options due to concerns about WhatsApp’s new terms and conditions that will be implemented in 2021. ITS considers the following alternatives:
 
-The outline of the header of the main GUI/client code is as follows:
+* Developing its own Africanized messaging app that will enhance the digital experience of its clients
+* Adopting Telegram while suggesting modifications to the owner of the app (Telegram Messenger) to localize the app for the South African market
 
-```cpp
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
-public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-    
-private:
-    Ui::MainWindow *ui;
-    private slots:
-    void createVaccine();
-};
-```
+Assume that you have been appointed by ITS as an HCI expert. Management has tasked you to do a user experience evaluation of Telegram as a possible alternative. ITS decides to adopt Telegram and you have to manage all aspects of interaction design (ID) related to the possible future enhancements or alternatives planned for the South African market
 
-2.1 An application named vaccineData.exe can be used to gather vaccine data from a user. Write the code that runs this application as a separate process, where its output is managed by the function in the main GUI/client named create()
+2.1 As an interaction designer, briefly describe interactive technologies that can be used to design the ITS app that is accessible and inclusive to meet the needs of the following group of users. Describe in point form the technologies per each group of users
 
-<details>
+| Users                                 | Technology Description                                                                                                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blind users (persons that cannot see) | <ul><li>Text to speech should be utilized</li><li>Support braille typing</li><li>Option for an adjusted interface with no keyboard but instead large buttons for sending voice notes and speech-to-text functionality for sending texts</li></ul> |
+| Deaf users (persons that cannot hear) | <ul><li>You can utilize the devices flash to indicate a notification has been received</li><li>Convert voice notes to text live</li><li>Auto-captions for video calls</li></ul>                                                                   |
 
-<summary>Answer</summary>
+2.2 There is a fine line between an interaction that works and that is usable. Designing interactions that work and are usable is achievable if design principles are appropriately applied. Discuss how you would apply the following principles when designing the ITS app
 
-```cpp
-QProcess *process = new QProcess();
-process->start("vaccineData.exe");
-connect(process, &QProcess::readyReadStandardOutput, this, &MainClient::create());
-```
+| Principle   | Description                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| Visibility  | The more visible you make the functions, the more likely it is that the users will be able to know what to do next. |
+| Feedback    | Sending feedback information to the user is vitally important                                                       |
+| Constraints | You should restrict the users interactions dependent on context                                                     |
+| Consistency | Design the interface to have similar operations and use similar elements to achieve similar tasks                   |
+| Affordance  | Provide ways the user can infer how to use functions and know what they have access to                              |
 
-</details>
+2.3 As an interaction designer for ITS, you would need to collect some requirements from the stakeholders. Identify four stakeholders and list them in the following table
 
-2.2 Write the code for the create() function. It retrieves the output from the application process in 2.1 and calls the following factory method code to create an instance of a vaccine
+| Point | Stakeholder                      |
+| ----- | -------------------------------- |
+| 1     | The users of the application     |
+| 2     | The investors of the application |
+| 3     | Tutors                           |
+| 4     | Developers of the application    |
 
-```cpp
-Vaccine* VaccineFactory::createVaccine(QString type, QString
-administrationMethod, QString str1, QString str2)
-{
-    if (type == "Cholera")
-        return new Cholera(administrationMethod, str1, str2.toInt());
-    else if (type == "Rabies")
-        return new Rabies(administrationMethod, str1, str2);
-    return NULL;
-}
-```
+2.4 What is the importance of involving users during the design of ITS? Identify at least 5 valid points and record them in the table below
 
-The output from the application read from the standard output is in the form vaccineType_argument1_argument2\*argument3
+| Point | Description of the point                                                                                |
+| ----- | ------------------------------------------------------------------------------------------------------- |
+| 1     | Developers gain a good understanding of user requirements                                               |
+| 2     | Ensures that the final product is usable to the end users                                               |
+| 3     | Manages the users’ expectations of the product                                                          |
+| 4     | Users are more likely to support the product because of feelings of ownership due to involvement        |
+| 5     | Ensures a more efficient development process where little backtracking due to useless ideas takes place |
 
-You do not need to include the code for adding the instance to the vaccine list
+2.5 During the design of the ITS app, how would you manage the expectations and ownership of the product by the stakeholders? Provide your answer in point form in the table below
 
-<details>
-
-<summary>Answer</summary>
-
-```cpp
-void MainWindow::create(QProcess *process){
-	QByteArray input = process->readAllStandardOutput();
-	QStringList values = QString(input).split("*");
-	
-	VaccineFactory vf;
-	Vaccine *vaccine = vf.createVaccine(values[0], values[1], values[2], values[3]);
-	
-	//Add to vaccine list
-}
-```
-
-</details>
-
-2.3 Write the code for the class declaration of the vaccine list class as well as the implementation code of the function that adds a vaccine instance to the list. Remember to take note of the process given at the start of this question (specifically point d)
-
-<details>
-
-<summary>Answer</summary>
-
-```cpp
-//Declaration
-	#include "vaccine.h"
-
-	class VaccineList : public QObject{
-		Q_OBJECT
-	public:
-		VaccineList(QObject *parent = nullptr)
-		bool addVaccine(Vaccine* vaccine);
-	signals:
-		void vaccineAdded(QString result);
-	private:
-		QList <Vaccine*> list;
-	};
-	
-//Implementation
-	bool VaccineList::addVaccine(Vaccine* vac){
-		list->append(vac);
-		emit vaccineAdded(vac->toString());
-	}
-
-```
-
-</details>
-
-2.4 In point e in the process above, the text containing the string representation of a vaccine instance is added to a QListWidget on the GUI. The following code has been provided (where ui->listWidget is the QListWidget variable and string is the string representation of the vaccine)
-
-```cpp
-QListWidget *newItem = new QListWidget;
-newItem->setText(string);
-ui->listWidget->setItem(1, newItem);
-```
-
-However, this code is not working correctly. Make the necessary corrections
-
-<details>
-
-<summary>Answer</summary>
-
-```cpp
-ui->listWidget->insertItem(1, string); //Overloaded method accepts QString
-QListWidgetItem *newItem(new QListWidgetItem); //Alternative method
-newItem->setText(string);
-ui->listWidget->insertItem(1, item); //Can use any row number
-```
-
-</details>
-
-2.5 Could a QStringListModel have been used instead of a QListWidget? If not, explain in detail why not; if it can, explain in detail how it could be achieved. Note that there are no marks for indicating yes or no
-
-<details>
-
-<summary>Answer</summary>
-
-Explain the difference between convenience model / view class, and model / view.
-
-You would need to add a view class such as QListView in order to use QStringListModel
-
-A QStringListModel can be used, if the proper MV classes are prepared and correctly setup, you would need to use a QListView or similar non-convenience class in order to display and represent the data
-
-</details>
+| Point | Description                                                                                                   |
+| ----- | ------------------------------------------------------------------------------------------------------------- |
+| 1     | Involve stakeholders in the design process                                                                    |
+| 2     | Adequate and timely training before the product is released                                                   |
+| 3     | Clarify the expectations of the stakeholders so that everyone understands the requirements (use focus groups) |
+| 4     | Provide regular updates throughout the development process                                                    |
+| 5     | Host regular meetings with stakeholders to assess their satisfaction                                          |
 
 ## Question 3
 
-The vaccine list should be saved as an XML file when the application closes.&#x20;
-
-Assume a MyVaccineList class with the following interface
-
-```cpp
-int size() const // returns the number of items in the list
-Vaccine* at(int) // returns the Vaccine instance at the specified position in the list
-```
-
-The XML file should have the following structure:
-
-```xml
-<VaccineList>
-    <vaccine class="Cholera">
-        <administered>Unknown administration method</administered>
-        <process>Unknown process</process>
-        <doses>0</doses>
-    </vaccine>
-    <vaccine class="Cholera">
-        <administered>injection</administered>
-        <process>disabled</process>
-        <doses>2</doses>
-    </vaccine>
-</VaccineList>
-```
-
-3.1 Reflective programming methods will be used to access data from vaccine instances in the list. Explain in detail what needs to be in place in the classes involved to allow this to be implementable. You should indicate clearly what needs to be done in which classes
+3.1 What do you understand by the term "emotional interaction"?
 
 <details>
 
 <summary>Answer</summary>
 
-To use reflective programming methods, each class involved must inherit from QObject and include the Q\_OBJECT macro within the class definition.
-
-For reading and writing data, the class(s) from which data must be collected within the XML-writer class, must include a Q\_PROPERTY() macro as well, which defines the QProperties as well as which methods must be utilized for the Read and Write utility.
-
-The Vaccine class will have to inherit from QObject as well as include the Q\_OBJECT macro and all relevant Q\_PROPERTY() macros for which data needs be accessed
-
-The InactivatedVaccine, AttenuatedVaccine, Rabies and Cholera classes will have to include the Q\_OBJECT macro as well, and the Q\_PROPERTY() macro for the relevant data which must be accessed
+Emotional interaction is concerned with how we feel and react when interacting with technology. It covers different aspects of the user experience from how we feel when first finding out about a new product to getting rid of it. It also looks at why people become emotionally attached to certain products, how social robots might help reduce loneliness and how to change human behavior through the use of emotive feedback
 
 </details>
 
-3.2 Use DOM to write the data from the vaccine list to the XML structure given above. Consider the following declarations and partial code (where the vaccine list is passed as a pointer to the write() function). Remember to use reflective programming techniques so that the code is as generic as possible
+3.2 From the components of the Anthony Ortony et al. (2005) model of emotional design, briefly explain how a wrist watch designed for teenage girls will invoke each of the components of the model. Provide your answer in the following table
 
-```cpp
-QDomDocument xmlDoc;
-QDomElement root;
-root = xmlDoc.createElement("VaccineList"); // set up root element
-xmlDoc.appendChild(root);
-void XmlWriter::write(MyVaccineList *mvl)
-{
-    // loop through all items in list
-    for (int item=0; item<mvl->size(; item++)
-    {
-        const QMetaObject* meta = // get the meta-object
-        // set up the vaccine tag
-        // loop through all the instance’s properties
-        // access instance’s properties
-        // create the appropriate XML tags
-    }
-    // write data to file
-    QFile xmlfile("vaccineList.xml");
-    xmlfile.open(QIODevice::WriteOnly);
-    QTextStream toFile(&xmlfile);
-    toFile << doc.toString();
-    xmlfile.close();
-}
-```
+<figure><img src="https://i.imgur.com/ne5EPeb.png" alt=""><figcaption></figcaption></figure>
 
-Supply the code where specifically required (indicated in bold italics) so that the data in the vaccine list is written to file
+| Component      | Explanation                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1 - Reflective | This refers to making a product look, feel and sound good. This is done by using bright colors and wild designs                                                                                        |
+| 2 - Behavioral | This refers to the usability of a product. This is achieved by its affordances of use and a system that is widely used by other watches                                                                |
+| 3 - Visceral   | This refers to the meaning and personal value of the product in a certain culture. This is achieved by using cultural imagery that reflect the environments that teenage girls regularly interact with |
 
-<details>
+3.3 You want to buy the above watch for your teenager. Assume that the watch has sports functions, including measuring heart rate and recording sport activities. You are concerned about the usability of the watch. List any four usability questions that you would ask before buying the watch in the following table?
 
-<summary>Answer</summary>
-
-```cpp
-for(int item = 0; item < mvl->size(); item++){
-    //Get the meta-object
-    const QMetaObject *meta = mvl->at(item)->metaObject();
-    
-    //Setup the vaccine tag
-    QString className = meta->className();
-    QDomElement vaccine(xmlDoc.createElement("vaccine"));
-    vaccine.setAttribute("class", className);
-    root.appendChild(vaccine);
-    
-    //Loop through all the instance's properties
-    for(int count = 1; count < meta->propertyCount(); count++){
-        //Access the instance's properties
-        const QMetaProperty prop = meta->property(count);
-        QString propName = prop.name();
-        QString propValue = mvl->at(item)->property(propName).toString();
-        
-        //Create the appropriate XML tags
-        QDomElement property = xmlDoc.createElement(propName);
-        QDomText propertyText = xmlDoc.createTextNode(propertyValue);
-        property.appendChild(propertyText);
-        vaccine.appendChild(property);
-    }
-}
-```
-
-</details>
-
-3.3 It has been suggested that SAX could just as easily be used to generate the XML file. Comment on this suggestion
-
-<details>
-
-<summary>Answer</summary>
-
-No, SAX can only be used to read XML
-
-</details>
+| Point | Usability questions                                            |
+| ----- | -------------------------------------------------------------- |
+| 1     | How clearly is the heart rate and sport information displayed? |
+| 2     | How comfortable is the watch?                                  |
+| 3     | How accurate is the heart rate monitor?                        |
+| 4     | How long does the battery last?                                |
 
 ## Question 4
 
-4.1 An optional property may be added to a vaccine instance indicating the authorization code of the user who added it. The code should be made up of three to five uppercase alphabetic characters followed by a hyphen and then 3 digits. An optional final character may be included
+Interviews can be viewed as a conversation with a purpose between two or more people where questions are asked by the interviewer to get facts or clarity from the interviewee. Interviews are mostly used for requirements gathering during product design or for testing the usability of a product. In point form, describe the characteristics of structured interviews and focus groups in the following table
 
-Give the following:
+| Structured interview characteristics                                                                 | Focus group characteristics                                                                |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1 - Predetermined questions are asked, and all participants get the same questions in the same order | 1 - Allows diverse and sensitive issues to be raised that could have otherwise been missed |
+| 2 - Typically closed questions are asked                                                             | 2 - Usually a group led by a trained facilitator                                           |
+| 3 - Only useful if the goals of the interview are clearly understood                                 | 3 - Participants are a representative sample of the target population                      |
 
-1. The input mask, indicating where this mask would be used
-2. The regular expression that could be used to ensure that a valid value is entered
-3. Assuming a vaccine instance named vac, add the user authorization code code to the instance’s properties
-4. Is it necessary to use both the input mask and regular expression to ensure a valid entry, explaining why you say so? Note that there are no marks for indicating only yes or no
+## Question 5
 
-<details>
+Cognitive walkthroughs involve simulating a user’s problem-solving process at each step in the human computer dialog, checking to see if the user’s goals and memory can be assumed to lead to the next correct action. In point form, describe each of the five steps involved in cognitive walkthroughs
 
-<summary>Answer</summary>
+| Point | Description of cognitive walkthrough stage                                                                                                                                                                                                                                                                                                                                                   |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Characteristics of typical users identified and documented. Sample tasks for the design being evaluated are developed. A description, mock-up or prototype of the interface is produced with a sequence of actions needed for users to complete the task                                                                                                                                     |
+| 2     | A designer and one or more expert evaluators come together to do the analysis                                                                                                                                                                                                                                                                                                                |
+| 3     | <p>Evaluators walk through action sequences for each task, placing it within the context of a typical scenario, and as they do this, they try to answer the following questions<br>- Will the user know what to do to achieve the task<br>- Will the user notice that the correct action is available <br>- Will the user associate and interpret the response from the action correctly</p> |
+| 4     | <p>As the walkthrough is being done, a record of critical information is compiled in which<br>- The assumptions about what would cause problems and why are identifiable<br>- Notes about side issues and design changes are made<br>- A summary of the results is compiled</p>                                                                                                              |
+| 5     | The design is then revised to fix the problems                                                                                                                                                                                                                                                                                                                                               |
 
-1\) ">AAAaa-999x"
-
-2\) "\[A-Z]{3,5}-\[0-9]{3}.?
-
-3\) vac.setProperty("code", code);
-
-4\) No, characters can be skipped. Either use regex and an input mask, or just use regex
-
-</details>
-
-4.2 The following VaccineMemento class has been used to provide run-time backup for the vaccine list. However, it is leading to errors. Rewrite the code so that the errors are fixed and the classic memento pattern is implemented
-
-```cpp
-class VaccineMemento
-{
-private:
-    VaccineMemento();
-    QList<QStringList> getState();
-    void setState(QList<QStringList> v);
-};
-```
-
-<details>
-
-<summary>Answer</summary>
-
-```cpp
-class VaccineMemento{
-private:
-	friend class VaccineList; //Declare the originators friend
-	VaccineMemento();
-	QList<QStringList> getState();
-	void setState(QList<QStringList> v);
-	QList<QStringList> list; //Add the list to store the state
-}
-```
-
-</details>
-
-4.3 An often-given advantage of cloud computing is that there is no longer the need to guess infrastructure in-house capacity. Explain what this means in terms of the scenario used in this exam
-
-<details>
-
-<summary>Answer</summary>
-
-* Vaccine list size is unknown, storage requirements are unknown and may vary
-* Could lead to wasted capacity or insufficient storage
-* Cloud storage facility can be scaled up or down as required
-
-</details>
