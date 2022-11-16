@@ -6,3 +6,4 @@ description: >-
 
 # Crypto
 
+### You can access the content: [here](https://docs.tristanphillips.dev/cryptocurrencies/)
