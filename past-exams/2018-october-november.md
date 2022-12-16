@@ -333,7 +333,7 @@ So that the object can be restored to that internal state later?
 
 3.2 Draw a UML diagram to illustrate the key classes, its data members and member functions, and the relationships between these key classes in the Memento pattern
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 3.3 Describe the main roles of the classes in the UML diagram given as answer to 3.2
 
