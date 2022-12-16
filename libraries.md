@@ -1,6 +1,6 @@
 # Libraries
 
-```csharp
+```
 Libraries
 ---------
     - Libraries are a collection of code that is used to perform a specific task.
