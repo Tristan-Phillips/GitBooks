@@ -9,7 +9,3 @@
 ## Programming
 
 * [Language Cheat Sheets](programming/language-cheat-sheets.md)
-
-## Finance and Tech
-
-* [Crypto](finance-and-tech/crypto.md)
